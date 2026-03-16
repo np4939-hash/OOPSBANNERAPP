@@ -1,18 +1,19 @@
-//uc2 code
 /**
- * OOPSBannerApp UC2 - OOPS Banner Display Application
+ * OOPSBannerApp UC3 - OOPS Banner Application (Use Case 3)
+ * This class improves efficiency by using String.join() to construct
+ * the banner lines, reducing memory overhead.
  * @author Neha
- * @version 2.0
+ * @version 3.0
  */
 public class OOPSBannerApp {
     public static void main(String[] args) {
-        // The 7-line grid for the OOPS Banner
-        System.out.println(" **** **** ***** **** ");
-        System.out.println("* * * * * * *");
-        System.out.println("* * * * * * *");
-        System.out.println("* * * * ***** **** ");
-        System.out.println("* * * * * * ");
-        System.out.println("* * * * * * ");
-        System.out.println(" **** **** * * ");
+        // Constructing each line using String.join with " " as delimiter
+        System.out.println(String.join("", "  *** ", " *** ", " ***** ", " **** "));
+        System.out.println(String.join("", " ** ** ", "** ** ", " ** ", " ** ** "));
+        System.out.println(String.join("", " ** ** ", "** ** ", " ** ", " ** ** "));
+        System.out.println(String.join("", " ** ** ", "** ** ", " ***** ", " **** "));
+        System.out.println(String.join("", " ** ** ", "** ** ", " ** ", " ** "));
+        System.out.println(String.join("", " ** ** ", "** ** ", " ** ", " ** "));
+        System.out.println(String.join("", "  *** ", " *** ", " ** ", " ***** "));
     }
 }
